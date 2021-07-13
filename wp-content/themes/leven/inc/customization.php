@@ -433,7 +433,8 @@ function leven_theme_customizations() {
         3. Logo
         ============================================================================= */
         .header-image img {
-           
+            ' . $logo_img_height_not_empty . '
+            ' . $logo_img_width_not_empty . '
         }
 
 
