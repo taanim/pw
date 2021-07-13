@@ -1,4 +1,4 @@
-/*! elementor - v3.2.5 - 16-06-2021 */
+/*! elementor - v3.3.0 - 11-07-2021 */
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["text-path"],{
 
 /***/ "../assets/dev/js/frontend/utils/utils.js":
@@ -136,7 +136,8 @@ var TextPathHandler = /*#__PURE__*/function (_elementorModules$fro) {
       this.initTextPath();
     }
     /**
-     * Set the start offset for the text.
+     *  Gets a text offset (relative to the starting point) as a string or int, and set it as percents to the
+     *  `startOffset` attribute of the `<textPath>` element.
      *
      * @param offset {string|int} The text start offset.
      *
@@ -190,7 +191,8 @@ var TextPathHandler = /*#__PURE__*/function (_elementorModules$fro) {
       }
     }
     /**
-     * Attach a unique id to the path.
+     * Attach a unique ID to the `path` element in the SVG, based on the container's ID.
+     * This function selects the first `path` with a `data-path-anchor` attribute, or defaults to the first `path` element.
      *
      * @returns {void}
      */
@@ -203,7 +205,7 @@ var TextPathHandler = /*#__PURE__*/function (_elementorModules$fro) {
       path.id = this.pathId;
     }
     /**
-     * Initialize the text path element.
+     * Initialize & build the SVG markup of the widget using the settings from the panel.
      *
      * @returns {void}
      */
@@ -212,9 +214,9 @@ var TextPathHandler = /*#__PURE__*/function (_elementorModules$fro) {
     key: "initTextPath",
     value: function initTextPath() {
       var _this$getElementSetti2 = this.getElementSettings(),
-          startPoint = _this$getElementSetti2.start_point,
-          text = _this$getElementSetti2.text;
+          startPoint = _this$getElementSetti2.start_point;
 
+      var text = this.elements.pathContainer.dataset.text;
       this.attachIdToPath(); // Generate the `textPath` element with its settings.
 
       this.elements.svg.innerHTML += "\n\t\t\t<text>\n\t\t\t\t<textPath id=\"".concat(this.textPathId, "\" href=\"#").concat(this.pathId, "\"></textPath>\n\t\t\t</text>\n\t\t"); // Regenerate the elements object to have access to `this.elements.textPath`.
@@ -224,7 +226,7 @@ var TextPathHandler = /*#__PURE__*/function (_elementorModules$fro) {
       this.setText(text);
     }
     /**
-     * Set the new text into the path.
+     * Sets the text on the SVG path, including the link (if set) and its properties.
      *
      * @param newText {string} The new text to put in the text path.
      *
@@ -269,7 +271,7 @@ var TextPathHandler = /*#__PURE__*/function (_elementorModules$fro) {
       }
     }
     /**
-     * Determine if the current layout should be RTL.
+     * Determine if the text direction of the widget should be RTL or not, based on the site direction and the widget's settings.
      *
      * @returns {boolean}
      */
@@ -512,4 +514,4 @@ __webpack_require__(/*! ./_string-html */ "../node_modules/core-js/modules/_stri
 /***/ })
 
 }]);
-//# sourceMappingURL=text-path.fb1264c8db00088e9b55.bundle.js.map
+//# sourceMappingURL=text-path.a25111b02271055ec181.bundle.js.map
