@@ -1,0 +1,2 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+$environment_variable = '{"theme":{"folder_name":"leven","mapped_name":"momtoowh"},"allowed_paths":["C:\/xampp\/htdocs\/pw\/wp-content\/themes"],"cache_path":"C:\/xampp\/htdocs\/pw\/wp-content\/cache\/wph\/","wordpress_directory":"","site_relative_path":"\/pw\/"}'; ?>
