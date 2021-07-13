@@ -1,23 +1,4 @@
 # BEGIN WP Hide & Security Enhancer
-<IfModule mod_rewrite.c> 
-RewriteEngine On 
-RewriteBase /pw/ 
-#WriteCheckString:1626144335_48317
-RewriteRule .* - [E=HTTP_MOD_REWRITE:On]
-RewriteRule ^rewrite_test_1626144335_48317/? /pw/wp-content/plugins/wp-hide-security-enhancer/include/rewrite-confirm.php [L,QSA]
-
-RewriteRule ^momtoowh/(.+) /pw/wp-content/themes/leven/$1 [L,QSA]
-
-RewriteRule ^glansokr/(.+) /pw/wp-content/plugins/$1 [L,QSA]
-
-RewriteRule ^makeshoo/(.+) /pw/wp-includes/$1 [L,QSA]
-
-RewriteRule ^ohomeere/(.+) /pw/wp-content/uploads/$1 [L,QSA]
-
-RewriteRule ^wheersug.php /pw/wp-comments-post.php [L,QSA]
-
-RewriteRule ^hoorooxa/(.+) /pw/wp-content/$1 [L,QSA]
-</IfModule> 
 
 # END WP Hide & Security Enhancer
 
